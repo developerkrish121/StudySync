@@ -2,6 +2,7 @@ import "./App.css";
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
 import Courses from "./components/Courses";
+import WhyChoose from "./components/WhyChoose";
 
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
       <Navbar />
       <Hero />
       <Courses />
+      <WhyChoose/>
     </>
   );
 }
