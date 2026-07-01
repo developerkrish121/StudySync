@@ -1,5 +1,65 @@
+/* ===========================
+   Google Font
+=========================== */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+/* ===========================
+   Global Styles
+=========================== */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: #f8fafc;
+  color: #1e293b;
+  overflow-x: hidden;
+}
+
+/* Root Container */
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* Links */
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Buttons */
+
+button {
+  font-family: inherit;
+}
+
+/* Images */
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Lists */
+
+ul {
+  list-style: none;
+}
+
+/* Sections */
+
+section {
+  width: 100%;
 }
