@@ -1,0 +1,140 @@
+.cta{
+    padding:100px 8%;
+    background:linear-gradient(135deg,#eef2ff,#f8fafc,#ffffff);
+}
+
+.cta-container{
+    max-width:1200px;
+    margin:auto;
+    background:linear-gradient(135deg,#4f46e5,#7c3aed,#06b6d4);
+    border-radius:30px;
+    padding:80px 60px;
+    text-align:center;
+    color:white;
+    position:relative;
+    overflow:hidden;
+    box-shadow:0 25px 60px rgba(79,70,229,.25);
+}
+
+.cta-container::before{
+    content:"";
+    position:absolute;
+    width:320px;
+    height:320px;
+    background:rgba(255,255,255,.12);
+    border-radius:50%;
+    top:-120px;
+    left:-100px;
+}
+
+.cta-container::after{
+    content:"";
+    position:absolute;
+    width:260px;
+    height:260px;
+    background:rgba(255,255,255,.08);
+    border-radius:50%;
+    bottom:-100px;
+    right:-80px;
+}
+
+.cta-content{
+    position:relative;
+    z-index:2;
+}
+
+.cta-tag{
+    display:inline-block;
+    padding:10px 22px;
+    border-radius:50px;
+    background:rgba(255,255,255,.15);
+    backdrop-filter:blur(10px);
+    border:1px solid rgba(255,255,255,.25);
+    font-weight:600;
+    margin-bottom:25px;
+}
+
+.cta-content h2{
+    font-size:3rem;
+    line-height:1.2;
+    margin-bottom:25px;
+    font-weight:800;
+}
+
+.cta-content p{
+    max-width:700px;
+    margin:0 auto 45px;
+    font-size:1.1rem;
+    line-height:1.8;
+    color:rgba(255,255,255,.9);
+}
+
+.cta-buttons{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.primary-btn{
+    padding:16px 34px;
+    border:none;
+    border-radius:50px;
+    background:white;
+    color:#4f46e5;
+    font-size:1rem;
+    font-weight:700;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.primary-btn:hover{
+    transform:translateY(-5px);
+    box-shadow:0 15px 30px rgba(255,255,255,.35);
+}
+
+.secondary-btn{
+    padding:16px 34px;
+    border:2px solid rgba(255,255,255,.4);
+    border-radius:50px;
+    background:transparent;
+    color:white;
+    font-size:1rem;
+    font-weight:700;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.secondary-btn:hover{
+    background:white;
+    color:#4f46e5;
+    transform:translateY(-5px);
+}
+
+@media(max-width:768px){
+
+.cta{
+    padding:70px 6%;
+}
+
+.cta-container{
+    padding:60px 25px;
+}
+
+.cta-content h2{
+    font-size:2.2rem;
+}
+
+.cta-content p{
+    font-size:1rem;
+}
+
+.cta-buttons{
+    flex-direction:column;
+}
+
+.primary-btn,
+.secondary-btn{
+    width:100%;
+}
+}

@@ -27,6 +27,14 @@ function Testimonials() {
       review:
         "The mentors and interactive lessons helped me improve my skills much faster than before.",
     },
+    {
+      id: 4,
+      image: "https://i.pravatar.cc/150?img=15",
+      name: "Naman Gupta",
+      role: "Software Engineer",
+      review:
+        "The mentors and interactive lessons helped me improve my skills much faster than before.",
+    }
   ];
 
   return (
