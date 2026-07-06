@@ -1,0 +1,62 @@
+.progress-chart{
+    background:#fff;
+    padding:25px;
+    border-radius:18px;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.progress-chart:hover{
+    transform:translateY(-6px);
+}
+
+.progress-header{
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:20px;
+}
+
+.progress-header span{
+    color:#2563eb;
+    font-weight:600;
+}
+
+.progress-info h1{
+    font-size:50px;
+    color:#2563eb;
+}
+
+.progress-info p{
+    color:#666;
+    margin:10px 0 20px;
+}
+
+.progress-bar-bg{
+    width:100%;
+    height:12px;
+    background:#e5e7eb;
+    border-radius:30px;
+    overflow:hidden;
+}
+
+.progress-fill{
+    width:82%;
+    height:100%;
+    background:#2563eb;
+    border-radius:30px;
+}
+
+.progress-stats{
+    margin-top:25px;
+    display:flex;
+    justify-content:space-between;
+}
+
+.progress-stats h3{
+    color:#111827;
+}
+
+.progress-stats p{
+    color:#777;
+    font-size:14px;
+}
