@@ -21,6 +21,7 @@ function App() {
       <FAQ />
       <CTA /> */}
       <Dashboard />
+      
     </>
   );
 }

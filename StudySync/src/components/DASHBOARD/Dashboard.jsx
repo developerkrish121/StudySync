@@ -9,6 +9,7 @@ import ProgressChart from "./ProgressChart";
 import Activity from "./Activity";
 import Planner from "./Planner";
 import UpcomingTasks from "./UpcomingTasks";
+import TaskManager from "../TaskManager/TaskManager";
 
 import {
   FaBookOpen,
@@ -26,7 +27,8 @@ const Dashboard = () => {
       <div className="dashboard-content">
 
         <WelcomeCard />
-
+        <TaskManager />
+        
         <div className="stats-grid">
           <StatsCard
             icon={<FaBookOpen />}
