@@ -1,28 +1,18 @@
-import "./App.css";
-import Dashboard from "./components/DASHBOARD/dashboard";
-// import Hero from "./components/Hero";
-// import Navbar from "./components/Navbar";
-// import Courses from "./components/Courses";
-// import Features from "./components/Features";
-// import Testimonials from "./components/Testimonials";
-// import FAQ from "./components/FAQ";
-// import CTA from "./components/CTA";
+import { Routes, Route } from "react-router-dom";
 
-
+import Home from "./pages/Home";
+import Login from "./pages/Login";
+import Register from "./pages/Register";
+import Dashboard from "./pages/Dashboard";
 
 function App() {
   return (
-    <>
-      {/* <Navbar />
-      <Hero />
-      <Courses />
-      <Features />
-      <Testimonials />
-      <FAQ />
-      <CTA /> */}
-      <Dashboard />
-      
-    </>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/login" element={<Login />} />
+      <Route path="/register" element={<Register />} />
+      <Route path="/dashboard" element={<Dashboard />} />
+    </Routes>
   );
 }
 
