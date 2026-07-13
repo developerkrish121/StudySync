@@ -50,11 +50,13 @@ function Features() {
   return (
     <section className="features" id="features">
       <div className="features-container">
+
         <div className="features-header">
           <h2>Why Choose StudySync?</h2>
+
           <p>
-            Everything you need to make your learning journey more productive,
-            interactive, and enjoyable.
+            Everything you need to make your learning journey
+            more productive, interactive, and enjoyable.
           </p>
         </div>
 
@@ -68,6 +70,7 @@ function Features() {
             />
           ))}
         </div>
+
       </div>
     </section>
   );

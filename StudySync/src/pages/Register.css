@@ -1,0 +1,718 @@
+/* ===========================
+   Google Font
+=========================== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+/* ===========================
+   Page
+=========================== */
+
+.register-page{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    position:relative;
+    overflow:hidden;
+    background:linear-gradient(135deg,#0f172a,#1e293b,#111827);
+}
+
+/* ===========================
+   Background Blur
+=========================== */
+
+.bg-circle{
+    position:absolute;
+    border-radius:50%;
+    filter:blur(100px);
+    opacity:.45;
+    animation:float 8s ease-in-out infinite;
+}
+
+.circle1{
+    width:320px;
+    height:320px;
+    background:#6366f1;
+    top:-80px;
+    left:-80px;
+}
+
+.circle2{
+    width:320px;
+    height:320px;
+    background:#06b6d4;
+    bottom:-80px;
+    right:-80px;
+}
+
+@keyframes float{
+
+    0%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-25px);
+    }
+
+    100%{
+        transform:translateY(0);
+    }
+
+}
+
+/* ===========================
+   Container
+=========================== */
+
+.register-container{
+
+    width:1100px;
+    max-width:95%;
+
+    display:grid;
+    grid-template-columns:1fr 1fr;
+
+    background:rgba(255,255,255,.06);
+
+    backdrop-filter:blur(20px);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    border-radius:25px;
+
+    overflow:hidden;
+
+    box-shadow:0 20px 60px rgba(0,0,0,.45);
+
+}
+
+/* ===========================
+   Left
+=========================== */
+
+.register-left{
+
+    color:white;
+
+    padding:60px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+}
+
+.logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    margin-bottom:35px;
+
+}
+
+.logo svg{
+
+    font-size:34px;
+
+    color:#60a5fa;
+
+}
+
+.logo h2{
+
+    font-size:32px;
+
+    font-weight:700;
+
+}
+
+.register-left h1{
+
+    font-size:48px;
+
+    line-height:1.2;
+
+    margin-bottom:20px;
+
+}
+
+.register-left p{
+
+    color:#cbd5e1;
+
+    line-height:1.8;
+
+    margin-bottom:40px;
+
+}
+
+/* ===========================
+   Stats
+=========================== */
+
+.login-stats{
+
+    display:flex;
+
+    gap:20px;
+
+}
+
+.stat{
+
+    background:rgba(255,255,255,.08);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    padding:20px;
+
+    border-radius:18px;
+
+    min-width:110px;
+
+    text-align:center;
+
+    transition:.3s;
+
+}
+
+.stat:hover{
+
+    transform:translateY(-6px);
+
+    background:rgba(255,255,255,.12);
+
+}
+
+.stat h2{
+
+    color:#60a5fa;
+
+    margin-bottom:5px;
+
+}
+
+.stat span{
+
+    color:#cbd5e1;
+
+    font-size:14px;
+
+}
+
+/* ===========================
+   Right
+=========================== */
+
+.register-right{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:45px;
+
+}
+
+/* ===========================
+   Card
+=========================== */
+
+.register-card{
+
+    width:100%;
+
+    max-width:430px;
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(20px);
+
+    border-radius:22px;
+
+    border:1px solid rgba(255,255,255,.1);
+
+    padding:40px;
+
+    animation:fadeUp .7s ease;
+
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+.register-card h2{
+
+    color:white;
+
+    font-size:34px;
+
+    margin-bottom:8px;
+
+}
+
+.register-card p{
+
+    color:#cbd5e1;
+
+    margin-bottom:25px;
+
+}
+
+/* ===========================
+   Input
+=========================== */
+
+.input-group{
+
+    display:flex;
+
+    align-items:center;
+
+    background:rgba(255,255,255,.08);
+
+    border:1px solid transparent;
+
+    border-radius:14px;
+
+    padding:15px 18px;
+
+    margin-bottom:12px;
+
+    transition:.3s;
+
+}
+
+.input-group:hover{
+
+    border-color:#60a5fa;
+
+}
+
+.input-group:focus-within{
+
+    border-color:#60a5fa;
+
+    box-shadow:0 0 15px rgba(96,165,250,.35);
+
+}
+
+.icon{
+
+    color:#60a5fa;
+
+    font-size:18px;
+
+}
+
+.input-group input{
+
+    flex:1;
+
+    margin-left:12px;
+
+    background:none;
+
+    border:none;
+
+    outline:none;
+
+    color:white;
+
+    font-size:15px;
+
+}
+
+.input-group input::placeholder{
+
+    color:#94a3b8;
+
+}
+
+.eye{
+
+    cursor:pointer;
+
+    color:#cbd5e1;
+
+    transition:.3s;
+
+}
+
+.eye:hover{
+
+    color:white;
+
+}
+
+/* ===========================
+   Error Messages
+=========================== */
+
+.error{
+    display:block;
+    color:#f87171;
+    font-size:13px;
+    margin-bottom:15px;
+    margin-left:5px;
+}
+
+/* ===========================
+   Options
+=========================== */
+
+.options{
+    display:flex;
+    align-items:center;
+    margin:15px 0;
+    color:white;
+    font-size:14px;
+}
+
+.options label{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    cursor:pointer;
+    line-height:1.5;
+}
+
+.options input[type="checkbox"]{
+    width:18px;
+    height:18px;
+    accent-color:#4f46e5;
+    cursor:pointer;
+}
+
+/* ===========================
+   Register Button
+=========================== */
+
+.register-btn{
+    width:100%;
+    padding:15px;
+    margin-top:10px;
+    border:none;
+    border-radius:14px;
+    background:linear-gradient(135deg,#4f46e5,#6366f1);
+    color:white;
+    font-size:16px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.35s ease;
+    box-shadow:0 10px 25px rgba(79,70,229,.35);
+}
+
+.register-btn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 18px 35px rgba(79,70,229,.45);
+}
+
+.register-btn:active{
+    transform:scale(.98);
+}
+
+/* ===========================
+   Divider
+=========================== */
+
+.divider{
+    position:relative;
+    text-align:center;
+    margin:28px 0;
+    color:#94a3b8;
+    font-size:14px;
+}
+
+.divider::before,
+.divider::after{
+
+    content:"";
+    position:absolute;
+    top:50%;
+    width:40%;
+    height:1px;
+    background:#475569;
+
+}
+
+.divider::before{
+    left:0;
+}
+
+.divider::after{
+    right:0;
+}
+
+.divider span{
+    background:rgba(15,23,42,.95);
+    padding:0 12px;
+}
+
+/* ===========================
+   Google Button
+=========================== */
+
+.google-btn{
+
+    width:100%;
+    padding:15px;
+
+    border:none;
+
+    border-radius:14px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:12px;
+
+    cursor:pointer;
+
+    background:white;
+
+    color:#111827;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    transition:.35s;
+
+}
+
+.google-btn:hover{
+
+    transform:translateY(-3px);
+
+    background:#f8fafc;
+
+}
+
+.google-btn svg{
+
+    color:#ea4335;
+
+    font-size:18px;
+
+}
+
+/* ===========================
+   Register Text
+=========================== */
+
+.register-text{
+
+    text-align:center;
+
+    margin-top:25px;
+
+    color:#cbd5e1;
+
+    font-size:15px;
+
+}
+
+.register-text a{
+
+    color:#60a5fa;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+}
+
+.register-text a:hover{
+
+    color:white;
+
+}
+
+/* ===========================
+   Card Animation
+=========================== */
+
+.register-card:hover{
+
+    transform:translateY(-4px);
+
+    transition:.35s;
+
+}
+
+/* ===========================
+   Input Animation
+=========================== */
+
+.input-group input{
+
+    transition:.3s;
+
+}
+
+.input-group input:focus{
+
+    transform:translateX(2px);
+
+}
+
+/* ===========================
+   Responsive
+=========================== */
+
+@media(max-width:992px){
+
+.register-container{
+
+    grid-template-columns:1fr;
+
+}
+
+.register-left{
+
+    display:none;
+
+}
+
+.register-right{
+
+    padding:35px;
+
+}
+
+.register-card{
+
+    max-width:500px;
+
+}
+
+}
+
+@media(max-width:768px){
+
+.register-page{
+
+    padding:20px;
+
+}
+
+.register-right{
+
+    padding:15px;
+
+}
+
+.register-card{
+
+    padding:30px 25px;
+
+}
+
+.register-card h2{
+
+    font-size:28px;
+
+}
+
+}
+
+@media(max-width:500px){
+
+.register-card{
+
+    padding:25px 18px;
+
+}
+
+.input-group{
+
+    padding:13px 15px;
+
+}
+
+.register-btn{
+
+    padding:14px;
+
+}
+
+.google-btn{
+
+    padding:14px;
+
+}
+
+.register-text{
+
+    font-size:14px;
+
+}
+
+}
+
+/* ===========================
+   Scrollbar
+=========================== */
+
+::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#0f172a;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#4f46e5;
+
+    border-radius:10px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#6366f1;
+
+}
