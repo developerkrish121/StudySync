@@ -1,944 +1,902 @@
-/* ===================================================
-   GOOGLE FONT
-=================================================== */
+/* ==========================================
+   STUDYSYNC HERO CSS
+   Part 1 - Base Layout
+========================================== */
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
 
-/* ===================================================
-   HERO SECTION
-=================================================== */
-
-.hero {
-  position: relative;
-  overflow: hidden;
-
-  min-height: 100vh;
-  width: 100%;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  padding: 120px 8% 80px;
-
-  background: linear-gradient(
-    135deg,
-    #f8fbff 0%,
-    #eef4ff 40%,
-    #ffffff 100%
-  );
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Poppins",sans-serif;
 }
 
-/* ===================================================
-   BACKGROUND BLUR
-=================================================== */
-
-.blur {
-  position: absolute;
-  border-radius: 50%;
-  filter: blur(120px);
-  opacity: .45;
-  z-index: 0;
+.hero{
+    position:relative;
+    overflow:hidden;
+    min-height:100vh;
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:120px 8% 80px;
+    background:linear-gradient(
+        135deg,
+        #f8fbff 0%,
+        #eef4ff 45%,
+        #ffffff 100%
+    );
 }
 
-.blur1 {
-  width: 340px;
-  height: 340px;
-  background: #6366f1;
-  top: 80px;
-  left: -120px;
+/* ==========================================
+   Blur Background
+========================================== */
+
+.blur{
+    position:absolute;
+    border-radius:50%;
+    filter:blur(120px);
+    opacity:.45;
+    z-index:0;
 }
 
-.blur2 {
-  width: 380px;
-  height: 380px;
-  background: #60a5fa;
-  bottom: -120px;
-  right: -120px;
+.blur1{
+    width:340px;
+    height:340px;
+    background:#6366f1;
+    top:40px;
+    left:-120px;
 }
 
-/* ===================================================
-   HERO CONTAINER
-=================================================== */
+.blur2{
+    width:360px;
+    height:360px;
+    background:#60a5fa;
+    bottom:-100px;
+    right:-120px;
+}
+
+/* ==========================================
+   Container
+========================================== */
 
 .hero-container{
-  width:100%;
-  max-width:1350px;
-
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  gap:70px;
-
-  position:relative;
-  z-index:2;
+    width:100%;
+    max-width:1350px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    align-items:center;
+    gap:80px;
+    position:relative;
+    z-index:2;
 }
 
-/* ===================================================
-   LEFT SECTION
-=================================================== */
+/* ==========================================
+   Left Content
+========================================== */
 
 .hero-left{
-  flex:1;
-
-  animation:slideLeft .9s ease;
+    animation:slideLeft .8s ease;
 }
-
-/* ===================================================
-   BADGE
-=================================================== */
 
 .hero-badge{
 
-  display:inline-flex;
-  align-items:center;
-  gap:10px;
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
 
-  padding:12px 24px;
+    padding:12px 24px;
 
-  border-radius:50px;
+    border-radius:999px;
 
-  background:rgba(99,102,241,.10);
+    background:rgba(99,102,241,.10);
 
-  border:1px solid rgba(99,102,241,.15);
+    color:#4f46e5;
 
-  color:#4f46e5;
+    border:1px solid rgba(99,102,241,.15);
 
-  font-size:15px;
-  font-weight:600;
+    font-weight:600;
 
-  margin-bottom:28px;
+    margin-bottom:28px;
 }
-
-/* ===================================================
-   HEADING
-=================================================== */
 
 .hero-left h1{
 
-  font-size:64px;
-  font-weight:800;
-  line-height:1.1;
+    font-size:64px;
 
-  color:#111827;
+    line-height:1.1;
 
-  margin-bottom:25px;
+    color:#111827;
+
+    margin-bottom:25px;
+
+    font-weight:800;
 }
-
-/* ===================================================
-   DESCRIPTION
-=================================================== */
 
 .hero-left p{
 
-  max-width:620px;
+    color:#64748b;
 
-  font-size:18px;
-  line-height:1.8;
+    font-size:18px;
 
-  color:#64748b;
+    line-height:1.8;
 
-  margin-bottom:40px;
+    max-width:620px;
+
+    margin-bottom:45px;
 }
 
-/* ===================================================
-   BUTTONS
-=================================================== */
+/* ==========================================
+   Buttons
+========================================== */
 
 .hero-buttons{
 
-  display:flex;
-  gap:18px;
-
-  margin-bottom:50px;
-}
-
-.primary-btn{
-
-  border:none;
-  cursor:pointer;
-
-  padding:18px 36px;
-
-  border-radius:14px;
-
-  font-size:16px;
-  font-weight:600;
-
-  color:white;
-
-  background:linear-gradient(
-      135deg,
-      #6366f1,
-      #4f46e5
-  );
-
-  transition:.35s;
-}
-
-.primary-btn:hover{
-
-  transform:translateY(-6px);
-
-  box-shadow:
-      0 20px 35px rgba(99,102,241,.30);
-}
-
-.secondary-btn{
-
-  border:1px solid #dbe4ff;
-
-  cursor:pointer;
-
-  padding:18px 34px;
-
-  border-radius:14px;
-
-  background:white;
-
-  color:#1e293b;
-
-  font-size:16px;
-  font-weight:600;
-
-  transition:.35s;
-}
-
-.secondary-btn:hover{
-
-  transform:translateY(-6px);
-
-  box-shadow:
-      0 18px 30px rgba(0,0,0,.08);
-}
-
-/* ===================================================
-   STATS
-=================================================== */
-
-.hero-stats{
-
-  display:flex;
-  gap:22px;
-}
-
-.stat-card{
-
-  flex:1;
-
-  background:white;
-
-  padding:24px;
-
-  border-radius:18px;
-
-  text-align:center;
-
-  box-shadow:
-      0 15px 35px rgba(15,23,42,.08);
-
-  transition:.35s;
-}
-
-.stat-card:hover{
-
-  transform:translateY(-8px);
-
-  box-shadow:
-      0 25px 45px rgba(99,102,241,.18);
-}
-
-.stat-card h2{
-
-  color:#4f46e5;
-
-  font-size:30px;
-
-  margin-bottom:8px;
-}
-
-.stat-card p{
-
-  margin:0;
-
-  font-size:15px;
-
-  color:#64748b;
-}
-
-/* ===================================================
-   RIGHT SECTION
-=================================================== */
-
-.hero-right{
-
-  flex:1;
-
-  display:flex;
-  justify-content:center;
-  align-items:center;
-
-  position:relative;
-
-  animation:slideRight 1s ease;
-}
-
-/* ===================================================
-   GOOGLE FONT
-=================================================== */
-
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
-
-/* ===================================================
-   HERO SECTION
-=================================================== */
-
-.hero {
-  position: relative;
-  overflow: hidden;
-
-  min-height: 100vh;
-  width: 100%;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  padding: 120px 8% 80px;
-
-  background: linear-gradient(
-    135deg,
-    #f8fbff 0%,
-    #eef4ff 40%,
-    #ffffff 100%
-  );
-}
-
-/* ===================================================
-   BACKGROUND BLUR
-=================================================== */
-
-.blur {
-  position: absolute;
-  border-radius: 50%;
-  filter: blur(120px);
-  opacity: .45;
-  z-index: 0;
-}
-
-.blur1 {
-  width: 340px;
-  height: 340px;
-  background: #6366f1;
-  top: 80px;
-  left: -120px;
-}
-
-.blur2 {
-  width: 380px;
-  height: 380px;
-  background: #60a5fa;
-  bottom: -120px;
-  right: -120px;
-}
-
-/* ===================================================
-   HERO CONTAINER
-=================================================== */
-
-.hero-container{
-  width:100%;
-  max-width:1350px;
-
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  gap:70px;
-
-  position:relative;
-  z-index:2;
-}
-
-/* ===================================================
-   LEFT SECTION
-=================================================== */
-
-.hero-left{
-  flex:1;
-
-  animation:slideLeft .9s ease;
-}
-
-/* ===================================================
-   BADGE
-=================================================== */
-
-.hero-badge{
-
-  display:inline-flex;
-  align-items:center;
-  gap:10px;
-
-  padding:12px 24px;
-
-  border-radius:50px;
-
-  background:rgba(99,102,241,.10);
-
-  border:1px solid rgba(99,102,241,.15);
-
-  color:#4f46e5;
-
-  font-size:15px;
-  font-weight:600;
-
-  margin-bottom:28px;
-}
-
-/* ===================================================
-   HEADING
-=================================================== */
-
-.hero-left h1{
-
-  font-size:64px;
-  font-weight:800;
-  line-height:1.1;
-
-  color:#111827;
-
-  margin-bottom:25px;
-}
-
-/* ===================================================
-   DESCRIPTION
-=================================================== */
-
-.hero-left p{
-
-  max-width:620px;
-
-  font-size:18px;
-  line-height:1.8;
-
-  color:#64748b;
-
-  margin-bottom:40px;
-}
-
-/* ===================================================
-   BUTTONS
-=================================================== */
-
-.hero-buttons{
-
-  display:flex;
-  gap:18px;
-
-  margin-bottom:50px;
-}
-
-.primary-btn{
-
-  border:none;
-  cursor:pointer;
-
-  padding:18px 36px;
-
-  border-radius:14px;
-
-  font-size:16px;
-  font-weight:600;
-
-  color:white;
-
-  background:linear-gradient(
-      135deg,
-      #6366f1,
-      #4f46e5
-  );
-
-  transition:.35s;
-}
-
-.primary-btn:hover{
-
-  transform:translateY(-6px);
-
-  box-shadow:
-      0 20px 35px rgba(99,102,241,.30);
-}
-
-.secondary-btn{
-
-  border:1px solid #dbe4ff;
-
-  cursor:pointer;
-
-  padding:18px 34px;
-
-  border-radius:14px;
-
-  background:white;
-
-  color:#1e293b;
-
-  font-size:16px;
-  font-weight:600;
-
-  transition:.35s;
-}
-
-.secondary-btn:hover{
-
-  transform:translateY(-6px);
-
-  box-shadow:
-      0 18px 30px rgba(0,0,0,.08);
-}
-
-/* ===================================================
-   STATS
-=================================================== */
-
-.hero-stats{
-
-  display:flex;
-  gap:22px;
-}
-
-.stat-card{
-
-  flex:1;
-
-  background:white;
-
-  padding:24px;
-
-  border-radius:18px;
-
-  text-align:center;
-
-  box-shadow:
-      0 15px 35px rgba(15,23,42,.08);
-
-  transition:.35s;
-}
-
-.stat-card:hover{
-
-  transform:translateY(-8px);
-
-  box-shadow:
-      0 25px 45px rgba(99,102,241,.18);
-}
-
-.stat-card h2{
-
-  color:#4f46e5;
-
-  font-size:30px;
-
-  margin-bottom:8px;
-}
-
-.stat-card p{
-
-  margin:0;
-
-  font-size:15px;
-
-  color:#64748b;
-}
-
-/* ===================================================
-   RIGHT SECTION
-=================================================== */
-
-.hero-right{
-
-  flex:1;
-
-  display:flex;
-  justify-content:center;
-  align-items:center;
-
-  position:relative;
-
-  animation:slideRight 1s ease;
-}
-
-/* ===================================================
-   SCROLL INDICATOR
-=================================================== */
-
-.scroll-indicator {
-
-  position: absolute;
-
-  left: 50%;
-  bottom: 30px;
-
-  transform: translateX(-50%);
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  gap: 10px;
-
-  color: #64748b;
-
-  z-index: 10;
-}
-
-.scroll-indicator span {
-
-  font-size: 14px;
-
-  letter-spacing: 1px;
-
-  font-weight: 500;
-}
-
-.mouse {
-
-  width: 28px;
-
-  height: 46px;
-
-  border: 2px solid #6366f1;
-
-  border-radius: 20px;
-
-  display: flex;
-
-  justify-content: center;
-
-  padding-top: 6px;
-}
-
-.wheel {
-
-  width: 5px;
-
-  height: 10px;
-
-  background: #6366f1;
-
-  border-radius: 20px;
-
-  animation: scrollWheel 1.8s infinite;
-}
-
-/* ===================================================
-   ANIMATIONS
-=================================================== */
-
-@keyframes slideLeft {
-
-  from {
-
-    opacity: 0;
-
-    transform: translateX(-60px);
-
-  }
-
-  to {
-
-    opacity: 1;
-
-    transform: translateX(0);
-
-  }
-}
-
-@keyframes slideRight {
-
-  from {
-
-    opacity: 0;
-
-    transform: translateX(60px);
-
-  }
-
-  to {
-
-    opacity: 1;
-
-    transform: translateX(0);
-
-  }
-}
-
-@keyframes float {
-
-  0% {
-
-    transform: translateY(0px);
-
-  }
-
-  50% {
-
-    transform: translateY(-12px);
-
-  }
-
-  100% {
-
-    transform: translateY(0px);
-
-  }
-}
-
-@keyframes progressAnimation {
-
-  from {
-
-    width: 0;
-
-  }
-
-  to {
-
-    width: 82%;
-
-  }
-}
-
-@keyframes scrollWheel {
-
-  0% {
-
-    opacity: 0;
-
-    transform: translateY(0);
-
-  }
-
-  40% {
-
-    opacity: 1;
-
-  }
-
-  100% {
-
-    opacity: 0;
-
-    transform: translateY(14px);
-
-  }
-}
-
-/* ===================================================
-   RESPONSIVE DESIGN
-=================================================== */
-
-@media (max-width:1200px){
-
-  .hero-container{
-
-    gap:50px;
-  }
-
-  .hero-left h1{
-
-    font-size:52px;
-  }
-
-  .dashboard{
-
-    width:420px;
-  }
-
-}
-
-@media (max-width:992px){
-
-  .hero{
-
-    padding:100px 6% 70px;
-  }
-
-  .hero-container{
-
-    flex-direction:column;
-
-    text-align:center;
-  }
-
-  .hero-left p{
-
-    margin:auto;
-
-    margin-bottom:40px;
-  }
-
-  .hero-buttons{
-
-    justify-content:center;
-  }
-
-  .hero-stats{
-
-    justify-content:center;
-
-    flex-wrap:wrap;
-  }
-
-  .hero-right{
-
-    margin-top:50px;
-  }
-
-  .floating-card{
-
-    right:0;
-  }
-
-  .floating-card2{
-
-    left:0;
-  }
-
-}
-
-@media (max-width:768px){
-
-  .hero{
-
-    padding:90px 20px 60px;
-  }
-
-  .hero-left h1{
-
-    font-size:40px;
-  }
-
-  .hero-left p{
-
-    font-size:16px;
-  }
-
-  .hero-buttons{
-
-    flex-direction:column;
-  }
-
-  .primary-btn,
-  .secondary-btn{
-
-    width:100%;
-  }
-
-  .hero-stats{
-
-    flex-direction:column;
-  }
-
-  .dashboard{
-
-    width:100%;
-
-    padding:22px;
-  }
-
-  .dashboard-stats{
-
-    grid-template-columns:1fr;
-  }
-
-  .session{
-
-    flex-direction:column;
-
-    align-items:flex-start;
-
-    gap:15px;
-  }
-
-  .session button{
-
-    width:100%;
-  }
-
-  .floating-card,
-  .floating-card2{
-
-    display:none;
-  }
-
-}
-
-@media (max-width:480px){
-
-  .hero-left h1{
-
-    font-size:34px;
-  }
-
-  .hero-badge{
-
-    font-size:13px;
-
-    padding:10px 18px;
-  }
-
-  .dashboard{
-
-    padding:18px;
-  }
-
-  .dashboard-header{
-
-    flex-direction:column;
+    display:flex;
 
     gap:18px;
 
-    text-align:center;
-  }
-
-  .dashboard-header h3{
-
-    font-size:22px;
-  }
-
-  .box h2{
-
-    font-size:22px;
-  }
-
-  .dashboard-course{
-
-    font-size:14px;
-  }
-
+    margin-bottom:55px;
 }
 
-/* ===================================================
-   SMOOTH HOVER EFFECTS
-=================================================== */
+.primary-btn{
+
+    padding:18px 36px;
+
+    border:none;
+
+    border-radius:14px;
+
+    background:linear-gradient(
+        135deg,
+        #6366f1,
+        #4f46e5
+    );
+
+    color:white;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.35s;
+}
+
+.primary-btn:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 20px 35px rgba(99,102,241,.30);
+}
+
+.secondary-btn{
+
+    padding:18px 34px;
+
+    background:white;
+
+    border:1px solid #dbe4ff;
+
+    border-radius:14px;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    transition:.35s;
+}
+
+.secondary-btn:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 18px 30px rgba(0,0,0,.08);
+}
+
+/* ==========================================
+   Stats
+========================================== */
+
+.hero-stats{
+
+    display:flex;
+
+    gap:22px;
+}
+
+.stat-card{
+
+    flex:1;
+
+    background:white;
+
+    border-radius:18px;
+
+    padding:24px;
+
+    text-align:center;
+
+    box-shadow:0 15px 35px rgba(15,23,42,.08);
+
+    transition:.35s;
+}
+
+.stat-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 25px 45px rgba(99,102,241,.18);
+}
+
+.stat-card h2{
+
+    color:#4f46e5;
+
+    font-size:30px;
+
+    margin-bottom:8px;
+}
+
+.stat-card p{
+
+    margin:0;
+
+    color:#64748b;
+
+    font-size:15px;
+}
+
+/* ==========================================
+   Right Section
+========================================== */
+
+.hero-right{
+
+    position:relative;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    animation:slideRight .9s ease;
+}
+/* ==========================================
+   Dashboard Card
+========================================== */
+
+.dashboard{
+
+    width:480px;
+
+    background:#ffffff;
+
+    border-radius:24px;
+
+    padding:28px;
+
+    box-shadow:
+        0 25px 60px rgba(15,23,42,.12);
+
+    position:relative;
+
+    transition:.35s;
+}
+
+.dashboard:hover{
+
+    transform:translateY(-8px);
+}
+
+/* ==========================================
+   Dashboard Header
+========================================== */
+
+.dashboard-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:28px;
+}
+
+.dashboard-header h3{
+
+    font-size:22px;
+
+    color:#111827;
+
+    font-weight:700;
+}
+
+.dashboard-header p{
+
+    margin-top:6px;
+
+    color:#64748b;
+
+    font-size:14px;
+}
+
+.profile{
+
+    width:50px;
+
+    height:50px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    color:white;
+
+    font-weight:700;
+
+    background:linear-gradient(
+        135deg,
+        #6366f1,
+        #4f46e5
+    );
+}
+
+/* ==========================================
+   Progress
+========================================== */
+
+.progress-card{
+
+    margin-bottom:28px;
+}
+
+.title-row{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:12px;
+
+    font-weight:600;
+
+    color:#1e293b;
+}
+
+.progress-bar{
+
+    width:100%;
+
+    height:10px;
+
+    border-radius:50px;
+
+    background:#e5e7eb;
+
+    overflow:hidden;
+}
+
+.progress-fill{
+
+    width:82%;
+
+    height:100%;
+
+    border-radius:50px;
+
+    background:linear-gradient(
+        90deg,
+        #6366f1,
+        #4f46e5
+    );
+
+    animation:progressAnimation 1.5s ease;
+}
+
+/* ==========================================
+   Dashboard Stats
+========================================== */
+
+.dashboard-stats{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:16px;
+
+    margin-bottom:28px;
+}
+
+.box{
+
+    background:#f8fafc;
+
+    border-radius:16px;
+
+    padding:18px;
+
+    text-align:center;
+
+    transition:.3s;
+}
+
+.box:hover{
+
+    transform:translateY(-5px);
+
+    background:#eef2ff;
+}
+
+.box h2{
+
+    color:#4f46e5;
+
+    font-size:24px;
+
+    margin-bottom:6px;
+}
+
+.box p{
+
+    color:#64748b;
+
+    font-size:14px;
+}
+
+/* ==========================================
+   Courses
+========================================== */
+
+.dashboard-courses{
+
+    margin-bottom:25px;
+}
+
+.dashboard-courses h4{
+
+    color:#111827;
+
+    margin-bottom:16px;
+
+    font-size:17px;
+}
+
+.dashboard-course{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:12px 0;
+
+    border-bottom:1px solid #ececec;
+
+    transition:.3s;
+}
 
 .dashboard-course:hover{
 
-  color:#4f46e5;
+    color:#4f46e5;
 
-  cursor:pointer;
+    cursor:pointer;
+
+    padding-left:6px;
+}
+
+/* ==========================================
+   Upcoming Session
+========================================== */
+
+.upcoming h4{
+
+    color:#111827;
+
+    margin-bottom:16px;
+}
+
+.session{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+}
+
+.session h5{
+
+    font-size:16px;
+
+    color:#111827;
+
+    margin-bottom:4px;
+}
+
+.session p{
+
+    font-size:14px;
+
+    color:#64748b;
+}
+
+.session button{
+
+    border:none;
+
+    padding:10px 22px;
+
+    border-radius:10px;
+
+    background:#4f46e5;
+
+    color:white;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.session button:hover{
+
+    background:#4338ca;
+}
+
+/* ==========================================
+   Floating Cards
+========================================== */
+
+.floating-card{
+
+    position:absolute;
+
+    top:50px;
+
+    left:-45px;
+
+    background:white;
+
+    padding:14px 22px;
+
+    border-radius:16px;
+
+    box-shadow:
+        0 18px 35px rgba(15,23,42,.10);
+
+    font-weight:600;
+
+    animation:float 3s ease-in-out infinite;
+}
+
+.floating-card2{
+
+    position:absolute;
+
+    bottom:45px;
+
+    right:-45px;
+
+    background:white;
+
+    padding:14px 22px;
+
+    border-radius:16px;
+
+    box-shadow:
+        0 18px 35px rgba(15,23,42,.10);
+
+    font-weight:600;
+
+    animation:float 3s ease-in-out infinite;
+}
+/* ==========================================
+   Scroll Indicator
+========================================== */
+
+.scroll-indicator{
+    position:absolute;
+    left:50%;
+    bottom:30px;
+    transform:translateX(-50%);
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:10px;
+    color:#64748b;
+    z-index:5;
+}
+
+.scroll-indicator span{
+    font-size:14px;
+    font-weight:500;
+    letter-spacing:1px;
+}
+
+.mouse{
+    width:28px;
+    height:46px;
+    border:2px solid #6366f1;
+    border-radius:20px;
+    display:flex;
+    justify-content:center;
+    padding-top:6px;
+}
+
+.wheel{
+    width:5px;
+    height:10px;
+    background:#6366f1;
+    border-radius:20px;
+    animation:scrollWheel 1.8s infinite;
+}
+
+/* ==========================================
+   Animations
+========================================== */
+
+@keyframes slideLeft{
+    from{
+        opacity:0;
+        transform:translateX(-60px);
+    }
+    to{
+        opacity:1;
+        transform:translateX(0);
+    }
+}
+
+@keyframes slideRight{
+    from{
+        opacity:0;
+        transform:translateX(60px);
+    }
+    to{
+        opacity:1;
+        transform:translateX(0);
+    }
+}
+
+@keyframes float{
+    0%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(-12px);
+    }
+    100%{
+        transform:translateY(0);
+    }
+}
+
+@keyframes progressAnimation{
+    from{
+        width:0;
+    }
+    to{
+        width:82%;
+    }
+}
+
+@keyframes scrollWheel{
+    0%{
+        opacity:0;
+        transform:translateY(0);
+    }
+    40%{
+        opacity:1;
+    }
+    100%{
+        opacity:0;
+        transform:translateY(14px);
+    }
+}
+
+/* ==========================================
+   Responsive - Laptop
+========================================== */
+
+@media (max-width:1200px){
+
+.hero-container{
+    gap:50px;
+}
+
+.hero-left h1{
+    font-size:54px;
+}
+
+.dashboard{
+    width:430px;
+}
+
+}
+
+/* ==========================================
+   Responsive - Tablet
+========================================== */
+
+@media (max-width:992px){
+
+.hero{
+    padding:100px 6% 70px;
+}
+
+.hero-container{
+    grid-template-columns:1fr;
+    text-align:center;
+}
+
+.hero-left p{
+    margin:0 auto 40px;
+}
+
+.hero-buttons{
+    justify-content:center;
+}
+
+.hero-stats{
+    justify-content:center;
+    flex-wrap:wrap;
+}
+
+.hero-right{
+    margin-top:60px;
+}
+
+.floating-card{
+    left:0;
+    top:-20px;
+}
+
+.floating-card2{
+    right:0;
+    bottom:-20px;
+}
+
+}
+
+/* ==========================================
+   Responsive - Mobile
+========================================== */
+
+@media (max-width:768px){
+
+.hero{
+    padding:90px 20px 60px;
+}
+
+.hero-left h1{
+    font-size:40px;
+}
+
+.hero-left p{
+    font-size:16px;
+}
+
+.hero-buttons{
+    flex-direction:column;
+}
+
+.primary-btn,
+.secondary-btn{
+    width:100%;
+}
+
+.hero-stats{
+    flex-direction:column;
+}
+
+.dashboard{
+    width:100%;
+    max-width:420px;
+    padding:22px;
+}
+
+.dashboard-stats{
+    grid-template-columns:1fr;
+}
+
+.session{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:15px;
+}
+
+.session button{
+    width:100%;
+}
+
+.floating-card,
+.floating-card2{
+    display:none;
+}
+
+.scroll-indicator{
+    display:none;
+}
+
+}
+
+/* ==========================================
+   Responsive - Small Mobile
+========================================== */
+
+@media (max-width:480px){
+
+.hero-left h1{
+    font-size:34px;
+}
+
+.hero-badge{
+    font-size:13px;
+    padding:10px 18px;
+}
+
+.dashboard{
+    padding:18px;
+}
+
+.dashboard-header{
+    flex-direction:column;
+    text-align:center;
+    gap:15px;
+}
+
+.dashboard-header h3{
+    font-size:20px;
+}
+
+.box h2{
+    font-size:22px;
+}
+
+.dashboard-course{
+    font-size:14px;
+}
+
+}
+
+/* ==========================================
+   Hover Effects
+========================================== */
+
+.hero-badge{
+    transition:.3s;
 }
 
 .hero-badge:hover{
-
-  transform:translateY(-3px);
-
-  transition:.3s;
+    transform:translateY(-3px);
 }
 
 .primary-btn:active,
 .secondary-btn:active{
+    transform:scale(.97);
+}
 
-  transform:scale(.97);
+.box,
+.stat-card,
+.dashboard-course,
+.session button,
+.floating-card,
+.floating-card2{
+    transition:.3s ease;
+}
+
+.dashboard{
+    transition:.35s ease;
 }
